@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="icon" href="./accets/logoFaticon (2).png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <img class="logoImg" src="./accets/logo Encriptador.png" alt="Logo">
+    </header>
+    <main class="main">
+        <div class="cuadroAEncriptar">
+            <textarea id="inputText" placeholder="Ingrese el texto aquí" name="inputUser" class="inputUser"></textarea>
+            <p class="advertencia">⚠ Solo letras minúsculas y sin acento</p>
+            <div class="contenedorBotones">
+                <button class="botonEncriptar botones" onclick="encryptText()">Encriptar</button>
+                <button class="botonDesencriptar botones" onclick="decryptText()">Desencriptar</button>
+            </div>
+        </div>
+        <div id="cuadroEncriptado" class="cuadroEncriptado">
+            <img class="imagenBuscando" src="./accets/Muñeco.png" alt="ilustración persona examinando">
+            <h2 class="altText">Ningún mensaje fue encontrado</h2>
+            <p class="altText2">ingresa el texto que desees encriptar o desencriptar</p>
+        </div> 
+    </main>
+    <footer class="footer">
+        <div>
+            <p>Desarrollado por <span class="nombre">Santiago Forero M.</span> en colaboración con Alura Latam</p> 
+            <a class="links" href="https://github.com/DNSO0">Github</a>
+            <a class="links" href="https://www.linkedin.com/in/santiago-forero-mendez-022065320/">Linkedin</a>
+        </div>
+        <img class="logoAlura" src="./accets/Logo.png" alt="Logo Alura">
+    </footer>
+
+    <script src="./script.js"></script>
+
+</body>
+</html>
