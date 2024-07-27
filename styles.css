@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
 
 :root{
     --color-fondo: #E5E5E5;
@@ -10,10 +10,12 @@
 *{
     margin: 0rem;
     padding: 0;
+    box-sizing: border-box;
 }
 body{
     background-color: var(--color-fondo);
     font-family: "Poppins", sans-serif;
+    overflow-x: hidden; /* Evita scroll horizontal */
 }
 .header{
     background: linear-gradient(90deg, rgba(255,255,255,1) 41%, rgba(20,33,61,1) 100%);
@@ -32,7 +34,6 @@ main{
     height: 100%;
 }
 .inputUser{
-    
     width: 23rem;
     height: 21.2rem;
     padding: 1rem;
@@ -100,7 +101,7 @@ main{
     border-radius: 10px;
 }
 .imagenBuscando{
-    width: 18rem;
+    width: 100%;
     align-self: center;
 }
 .altText{
@@ -113,7 +114,6 @@ main{
 }
 .botonCopiar{
     margin-top: 1rem;
-
 }
 .footer{
     display: flex;
@@ -125,9 +125,82 @@ main{
     color: var(--color-blanco);
 }
 .nombre{
-color: var(--color-accion);
+    color: var(--color-accion);
 }
 .links{
     color: var(--color-fondo);
     margin-right: 1rem;
+}
+
+/* Media queries para tabletas */
+@media (max-width: 768px) {
+    .logoImg {
+        height: 4rem;
+        margin: 0.5rem 0 0rem 1rem;
+    }
+
+    main {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        padding: 0 1rem; /* Espacio lateral para evitar scroll */
+    }
+
+    .inputUser {
+        width: 100%;
+        max-width: 30rem;
+        height: 15rem;
+    }
+
+    .cuadroEncriptado {
+        width: 100%;
+        max-width: 30rem;
+        padding: 1rem;
+    }
+
+    .imagenBuscando {
+        width: 80%;
+    }
+}
+
+/* Media queries para móviles */
+@media (max-width: 480px) {
+    .logoImg {
+        height: 3rem;
+        margin: 0.5rem 0 0rem 0.5rem;
+    }
+
+    .inputUser {
+        width: 100%;
+        max-width: 20rem;
+        height: 12rem;
+    }
+
+    .contenedorBotones {
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+    }
+
+    .botones {
+        width: 100%;
+        max-width: 20rem;
+        height: 2.5rem;
+    }
+
+    .cuadroEncriptado {
+        width: 100%;
+        max-width: 20rem;
+        padding: 1rem;
+    }
+
+    .imagenBuscando {
+        width: 100%;
+    }
+
+    .footer {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem 0;
+    }
 }
